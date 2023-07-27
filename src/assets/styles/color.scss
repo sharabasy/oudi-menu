@@ -1,0 +1,46 @@
+$white: #ffffff;
+$off-white: #fefefe;
+
+$gray: #737373;
+$light-gray: #9ba2ab;
+$off-gray: #dddddd;
+
+.white {
+    color: $white;
+}
+
+.white-bg {
+    background-color: $white;
+}
+
+.off-white {
+    color: $off-white;
+}
+
+.off-white-bg {
+    background-color: $off-white;
+}
+
+.gray {
+    color: $gray;
+}
+
+.gray-bg {
+    background-color: $gray;
+}
+
+.light-gray {
+    color: $light-gray;
+}
+
+.light-gray-bg {
+    background-color: $light-gray;
+}
+
+.off-gray {
+    color: $off-gray;
+}
+
+.off-gray-bg {
+    background-color: $off-gray;
+}

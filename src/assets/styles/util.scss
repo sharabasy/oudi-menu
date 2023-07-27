@@ -1,0 +1,54 @@
+.pointer {
+    cursor: pointer;
+}
+
+.font-bold {
+    font-weight: 600;
+}
+
+.font-light {
+    font-weight: 100;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    animation: slide-in-top 0.5s ease-out;
+}
+
+p {
+    animation: slide-in-bottom 0.5s ease-out;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+@keyframes slide-in-top {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-bottom {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

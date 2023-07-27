@@ -1,3 +1,62 @@
 :local {
-    
+    .news-letter {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 20px 20px;
+
+        &--tag {
+            padding: 15px 35px;
+        }
+
+        &--text {
+            max-width: 800px;
+            text-align: center;
+        }
+
+        &--form {
+            position: relative;
+
+            &--input {
+                outline: none;
+                width: 700px;
+                max-width: 600px;
+                height: 50px;
+                box-sizing: border-box;
+                border: 1px solid #9ba2ab;
+                padding: 5px 10px;
+
+                &:focus {
+                    border-color:#6abf4b;
+                }
+            }
+
+            &--btn {
+                position: absolute;
+                right: 5px;
+                top: 15px;
+                border: none;
+                width: 120px;
+                height: 40px;
+                transition: all .2s ease-in-out;
+
+                &:hover {
+                    transform: translateX(-6px);
+                }
+            }
+        }
+    }
+
+    @media (max-width: 992px) {
+        .news-letter {
+            &--form {
+                &--input {
+                    width: 300px;
+                }
+
+                &--btn {
+                    width: 90px;
+                }
+            }
+        }
+    }
 }

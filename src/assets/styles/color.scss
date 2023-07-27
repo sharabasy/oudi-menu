@@ -8,6 +8,10 @@ $off-gray: #dddddd;
 $sky: #edf2f7;
 $dark-blue: #2d3748;
 
+$green: #6abf4b;
+
+$red: #ff3636;
+
 .white {
     color: $white;
 }
@@ -62,4 +66,20 @@ $dark-blue: #2d3748;
 
 .dark-blue-bg {
     background-color: $dark-blue;
+}
+
+.green {
+    color: $green;
+}
+
+.green-bg {
+    background-color: $green;
+}
+
+.red {
+    color: $red;
+}
+
+.red-bg {
+    background-color: $red;
 }

@@ -1,5 +1,7 @@
 import React from "react";
 
+import NewsLetter from '../../components/newsLetter/NewsLetter';
+
 import style from './home.module.scss';
 
 const Home = () => {
@@ -9,7 +11,7 @@ const Home = () => {
             {/* Main Section */}
             {/* Portfolio slider */}
             {/* Our Partners */}
-            {/* News letter */}
+            <NewsLetter />
         </div>
     );
 };

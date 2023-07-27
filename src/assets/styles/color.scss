@@ -5,6 +5,9 @@ $gray: #737373;
 $light-gray: #9ba2ab;
 $off-gray: #dddddd;
 
+$sky: #edf2f7;
+$dark-blue: #2d3748;
+
 .white {
     color: $white;
 }
@@ -43,4 +46,20 @@ $off-gray: #dddddd;
 
 .off-gray-bg {
     background-color: $off-gray;
+}
+
+.sky {
+    color: $sky;
+}
+
+.sky-bg {
+    background-color: $sky;
+}
+
+.dark-blue {
+    color: $dark-blue;
+}
+
+.dark-blue-bg {
+    background-color: $dark-blue;
 }

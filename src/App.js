@@ -2,6 +2,8 @@ import React from "react";
 
 import { Outlet } from "react-router-dom";
 
+import Footer from './components/footer/Footer';
+
 import style from './app.module.scss';
 
 function App() {
@@ -12,7 +14,7 @@ function App() {
       {/* What'sApp Button */}
       {/* Chat Button */}
       {/* Keep in touch form */}
-      {/* footer */}
+      <Footer />
     </div>
   );
 }

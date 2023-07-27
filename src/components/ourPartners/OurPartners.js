@@ -52,18 +52,18 @@ const OurPartners = () => {
     }, [partners]);
 
     return (
-        <div>
+        <div className={`full-width ${style['our-partners']}`}>
             <div className={`full-width flex-row-center ${style['our-partners--header']}`}>
                 <div className={`inter size-32px ${style['our-partners--header--title']}`}>
                     Our Partners
                 </div>
                 <img src={tag} alt="background of header" />
             </div>
-            <div className="inter size-14px full-width flex-row-center gray">Stories that started with trust given to us by our customers and continued thanks to our belief in them.</div>
+            <div className={`inter size-14px flex-row-center gray ${style['our-partners--header--sub-title']}`}>Stories that started with trust given to us by our customers and continued thanks to our belief in them.</div>
             <div className="full-width flex-row-center flex-wrap">
                 {partners.slice(0, showPartners).map((partner, index) => (
                     <div key={index} className={`${style['our-partners--slot']}`}>
-                        <img src={partner.logo} alt={partner.name} />
+                        <img src={partner.logo} className="shadow-2px radius-10px" alt={partner.name} />
                     </div>
                 ))}
             </div>

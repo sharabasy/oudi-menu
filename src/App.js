@@ -2,6 +2,7 @@ import React from "react";
 
 import { Outlet } from "react-router-dom";
 
+import WhatsAppButton from "./components/buttons/WhatsAppButton";
 import Footer from './components/footer/Footer';
 
 import style from './app.module.scss';
@@ -11,7 +12,7 @@ function App() {
     <div className={`${style['App']} white-bg`}>
       {/* Navbar */}
       <Outlet />
-      {/* What'sApp Button */}
+      <WhatsAppButton />
       {/* Chat Button */}
       {/* Keep in touch form */}
       <Footer />

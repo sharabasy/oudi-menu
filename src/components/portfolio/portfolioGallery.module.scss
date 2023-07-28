@@ -1,3 +1,39 @@
 :local {
-    
+    .portfolio-gallery {
+        padding: 20px;
+
+        &--item {
+            background-color: #f7f7f7;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.2s ease-in-out;
+
+            &:hover {
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            }
+
+            img {
+                width: 250px;
+                height: 250px;
+                border-radius: 8px;
+                margin-bottom: 10px;
+            }
+
+            .technology-tags {
+                margin-top: 10px;
+
+                .technology-tag {
+                    background-color: #007bff;
+                    color: #fff;
+                    padding: 5px 10px;
+                    margin: 5px;
+                }
+            }
+
+
+        }
+    }
+
 }

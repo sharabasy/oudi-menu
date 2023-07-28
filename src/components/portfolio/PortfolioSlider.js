@@ -1,44 +1,9 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect } from "react";
 import style from './portfolioSlider.module.scss';
 import tag from '../../assets/images/tag.svg';
+import portfolioItems from '../../data/portfolioItems.js';
 
 const PortfolioSlider = () => {
-    const portfolioItems = useMemo(() => [
-        {
-            id: 1,
-            backgroundColor: '#f7b267',
-            coverImage: 'https://via.placeholder.com/300',
-            title: 'Project 1',
-            description: 'This is the first project description.',
-            technologies: ['react', 'nodejs', 'mongodb']
-        },
-        {
-            id: 2,
-            backgroundColor: '#f79d65',
-            coverImage: 'https://via.placeholder.com/250',
-            title: 'Project 2',
-            description: 'This is the second project description.',
-            technologies: ['Flutter', 'Dart', 'Firebase']
-        },
-        {
-            id: 3,
-            backgroundColor: '#f4845f',
-            coverImage: 'https://via.placeholder.com/300',
-            title: 'Project 3',
-            description: 'This is the third project description.',
-            technologies: ['figma']
-        },
-        {
-            id: 4,
-            backgroundColor: '#f27059',
-            coverImage: 'https://via.placeholder.com/200',
-            title: 'Project 4',
-            description: 'This is the fourth project description.',
-            technologies: ['react', 'nodejs', 'mongodb']
-        },
-        // Add more portfolio items as needed...
-    ], []);
-
     const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
@@ -52,7 +17,7 @@ const PortfolioSlider = () => {
 
         // Clean up the interval when the component unmounts
         return () => clearInterval(intervalId);
-    }, [portfolioItems]);
+    }, []);
 
 
     const handleSlideClick = (index) => {

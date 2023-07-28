@@ -1,8 +1,10 @@
 import React from "react";
 
-import style from './home.module.scss';
+import NewsLetter from '../../components/newsLetter/NewsLetter';
 import OurPartners from "../../components/ourPartners/OurPartners";
 import PortfolioSlider from "../../components/portfolio/PortfolioSlider";
+
+import style from './home.module.scss';
 const Home = () => {
     return (
         <div className={`${style['page']}`}>
@@ -10,7 +12,7 @@ const Home = () => {
             {/* Main Section */}
             <PortfolioSlider/>
             <OurPartners/>
-            {/* News letter */}
+            <NewsLetter />
         </div>
     );
 };

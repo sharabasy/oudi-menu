@@ -1,5 +1,80 @@
+// Import the fadeIn keyframes
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 :local {
     .page {
-        width: 100%;
+        background-color: #5f92af;
+        box-sizing: border-box;
+        padding: 50px 200px;
+        color: #fff;
+
+        // Apply the animation to the page
+        animation: fadeIn 1s ease-out;
+    }
+
+    h1 {
+        // Apply the fadeInFromLeft animation to h1 element
+        animation: fadeInFromLeft 1s ease-out 0.5s;
+    }
+
+    p {
+        // Apply the fadeInFromRight animation to p element
+        animation: fadeInFromRight 1s ease-out 0.5s;
+    }
+
+    h3 {
+        // Apply the fadeInFromLeft animation to h3 element
+        animation: fadeInFromLeft 1s ease-out 0.5s;
+        min-width: max-content;
+    }
+
+    .text {
+        line-height: 2;
+    }
+
+    img {
+        max-width: 300px;
+    }
+
+    .divider {
+        width: 35%;
+        height: 1px;
+        background-color: #fff; // Set the color of the line here
+        margin: 15px 0; // Adjust the spacing around the line as needed
+    }
+}
+
+// Rest of the keyframes for fadeInFromLeft and fadeInFromRight
+@keyframes fadeInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
 }

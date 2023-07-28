@@ -1,5 +1,5 @@
 $white: #ffffff;
-$off-white: #fefefe;
+$off-white: #edf2f7;
 
 $gray: #737373;
 $light-gray: #9ba2ab;
@@ -9,6 +9,10 @@ $sky: #edf2f7;
 $dark-blue: #2d3748;
 
 $green: #6abf4b;
+$yellow: #ffc557;
+$baby-blue: #3cb4e5;
+$orange: #ff7f40;
+$pink: #fb5373;
 
 $red: #ff3636;
 
@@ -74,6 +78,38 @@ $red: #ff3636;
 
 .green-bg {
     background-color: $green;
+}
+
+.yellow {
+    color: $yellow;
+}
+
+.yellow-bg {
+    background-color: $yellow;
+}
+
+.baby-blue {
+    color: $baby-blue;
+}
+
+.baby-blue-bg {
+    background-color: $baby-blue;
+}
+
+.orange {
+    color: $orange;
+}
+
+.orange-bg {
+    background-color: $orange;
+}
+
+.pink {
+    color: $pink;
+}
+
+.pink-bg {
+    background-color: $pink;
 }
 
 .red {

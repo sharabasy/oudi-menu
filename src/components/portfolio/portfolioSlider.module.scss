@@ -1,3 +1,73 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 :local {
-    
+    .portfolio-slider {
+        &--header {
+            text-align: center;
+
+            &--title {
+                z-index: 1;
+                padding: 10px;
+                animation: fadeIn 1s ease-in-out;
+            }
+
+            img {
+                animation: fadeIn 1s ease-in-out;
+                height: 40%;
+                position: absolute;
+                z-index: 0;
+            }
+
+            &--sub-title {
+                padding: 10px;
+                animation: fadeIn 2s ease-in-out;
+            }
+        }
+
+        &-section {
+            padding: 20px;
+            box-sizing: border-box;
+
+            img {
+                width: 200px;
+                height: 200px;
+                object-fit: contain;
+            }
+
+            .project-circle {
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                margin: 0 5px;
+                transition: white 0.3s ease-in-out;
+                z-index: 2;
+            }
+
+            .active-circle {
+                background-color: #007bff;
+            }
+
+            .arrow {
+                width: 30px;
+                height: 30px;
+                background-color: #007bff;
+                color: #fff;
+                margin: 0 5px;
+                transition: background-color 0.3s ease-in-out;
+            }
+
+        }
+    }
+
 }

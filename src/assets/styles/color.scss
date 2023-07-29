@@ -1,5 +1,6 @@
 $white: #ffffff;
 $off-white: #edf2f7;
+$black: #333333;
 
 $gray: #737373;
 $light-gray: #9ba2ab;
@@ -30,6 +31,14 @@ $red: #ff3636;
 
 .off-white-bg {
     background-color: $off-white;
+}
+
+.black {
+    color: $black;
+}
+
+.black-bg {
+    background-color: $black;
 }
 
 .gray {

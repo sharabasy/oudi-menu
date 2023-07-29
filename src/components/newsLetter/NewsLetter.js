@@ -11,7 +11,7 @@ const NewsLetter = () => {
             email: ''
         },
         validationSchema: yup.object({
-            email: yup.string().email('Invalid email address').required('Required')
+            email: yup.string().email('Invalid email address').required()
         }),
         onSubmit: values => {
             console.log(values);
@@ -36,7 +36,7 @@ const NewsLetter = () => {
                     value={formik.values.email}
                 />
                 {formik.errors.email && <p className="open-sans red size-12px margin-12px-H"><i className="bi bi-exclamation-triangle-fill"></i> {formik.errors.email}</p>}
-                <button className={`${style['news-letter--form--btn']} inter white green-bg shadow-5px radius-5px pointer`}>Subscribe</button>
+                <button className={`${style['news-letter--form--btn']} inter white green-bg shadow-5px radius-5px pointer`} type="submit">Subscribe</button>
             </form>
         </div>
     );

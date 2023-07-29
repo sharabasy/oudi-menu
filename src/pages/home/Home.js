@@ -9,6 +9,7 @@ import MainSection from "../../components/mainSection/MainSection"
 const Home = () => {
     return (
         <div className={`${style['page']}`}>
+            <MainSection/>
             <PortfolioSlider/>
             <OurPartners/>
             <NewsLetter />

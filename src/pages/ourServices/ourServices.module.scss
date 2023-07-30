@@ -1,5 +1,144 @@
 :local {
     .page {
-        width: 100%;
+        box-sizing: border-box;
+        padding: 100px 200px;
+    }
+
+    h1 {
+        // Apply the fadeInFromLeft animation to h1 element
+        animation: fadeInFromLeft 1s ease-out 0.5s;
+    }
+
+    .services {
+        align-items: flex-start !important;
+        box-sizing: border-box;
+    }
+
+    .service {
+        position: relative;
+        height: 150px;
+        margin: 2px 0;
+    }
+
+    .piece {
+        height: 100%;
+        margin: 1px;
+
+        &--cont {
+            text-align: center;
+            box-sizing: border-box;
+            padding: 40px;
+            position: relative;
+            background-color: transparent !important;
+        }
+
+
+        &--head {
+            width: 30%;
+            z-index: 2;
+
+            &--top {
+                width: 32px;
+                height: 32px;
+                position: absolute;
+                bottom: calc(100% - 5px);
+                border-radius: 50%;
+
+                &.r-side {
+                    right: calc(15% - 16px);
+                }
+            }
+
+            &--right {
+                width: 32px;
+                height: 32px;
+                position: absolute;
+                left: calc(30% - 4px);
+                border-radius: 50%;
+            }
+
+            &--bottom {
+                width: 32px;
+                height: 32px;
+                position: absolute;
+                top: calc(100% - 5px);
+                border-radius: 50%;
+
+                &.r-side {
+                    right: calc(15% - 16px);
+                }
+            }
+
+            &--left {
+                width: 32px;
+                height: 32px;
+                position: absolute;
+                right: calc(30% - 4px);
+                border-radius: 50%;
+            }
+        }
+
+        &--description {
+            width: 70%;
+            z-index: 0;
+
+            &>div {
+                background-color: white;
+            }
+
+            &--top {
+                width: 35px;
+                height: 35px;
+                position: absolute;
+                top: -8px;
+                right: calc(100% - 15% - 17.5px);
+                border-radius: 50%;
+
+                &.r-side {
+                    right: calc(15% - 17.5px);
+                }
+            }
+
+            &--right {
+                width: 35px;
+                height: 35px;
+                position: absolute;
+                right: calc(30% - 5px);
+                border-radius: 50%;
+            }
+
+            &--bottom {
+                width: 35px;
+                height: 35px;
+                position: absolute;
+                bottom: -8.5px;
+                right: calc(100% - 15% - 17.5px);
+                border-radius: 50%;
+
+                &.r-side {
+                    right: calc(15% - 17.5px);
+                }
+            }
+
+            &--left {
+                width: 35px;
+                height: 35px;
+                position: absolute;
+                left: calc(30% - 5px);
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+@keyframes fadeInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
 }

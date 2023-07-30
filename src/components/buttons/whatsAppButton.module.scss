@@ -9,7 +9,7 @@
     .whatsapp-button {
         box-sizing: border-box;
         padding: 10px;
-        background-color: #00e676;
+        background: linear-gradient(90deg, #00e676, #00c853);
         color: white;
         border: none;
         cursor: pointer;
@@ -19,6 +19,7 @@
             .whatsapp-tag {
                 display: flex !important;
             }
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.25); /* Add a shadow effect on hover */
         }
     }
 

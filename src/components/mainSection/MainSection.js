@@ -1,5 +1,4 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback, useMemo } from "react";
 import headerImg from "../../assets/images/header-img.svg";
 import TrackVisibility from 'react-on-screen';
 import 'animate.css';
@@ -10,19 +9,11 @@ export const MainSection = () => {
     const [isDeleting, setIsDeleting] = useState(false);
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300 - Math.random() * 100);
-    const [index, setIndex] = useState(1);
-    const toRotate = ["Web Designers", "App Designers", "UI/UX Designers"];
-    const period = 2000;
 
-    useEffect(() => {
-        let ticker = setInterval(() => {
-            tick();
-        }, delta);
+    // Initialize the 'toRotate' array using useMemo
+    const toRotate = useMemo(() => ["Web Designers", "App Designers", "UI/UX Designers"], []);
 
-        return () => { clearInterval(ticker) };
-    }, [text])
-
-    const tick = () => {
+    const tick = useCallback(() => {
         let i = loopNum % toRotate.length;
         let fullText = toRotate[i];
         let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
@@ -35,17 +26,22 @@ export const MainSection = () => {
 
         if (!isDeleting && updatedText === fullText) {
             setIsDeleting(true);
-            setIndex(prevIndex => prevIndex - 1);
-            setDelta(period);
+            setLoopNum(loopNum => loopNum + 1);
+            setDelta(2000);
         } else if (isDeleting && updatedText === '') {
             setIsDeleting(false);
-            setLoopNum(loopNum + 1);
-            setIndex(1);
+            setLoopNum(loopNum => loopNum + 1);
             setDelta(500);
-        } else {
-            setIndex(prevIndex => prevIndex + 1);
         }
-    }
+    }, [isDeleting, loopNum, text, toRotate]);
+
+    useEffect(() => {
+        let ticker = setInterval(() => {
+            tick();
+        }, delta);
+
+        return () => { clearInterval(ticker) };
+    }, [tick, delta]);
 
     return (
         <section className={`flex-row-between flex-wrap ${style['banner']}`} id="home">
@@ -68,4 +64,5 @@ export const MainSection = () => {
         </section>
     )
 }
+
 export default MainSection;

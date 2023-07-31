@@ -15,7 +15,7 @@ const WhoAreWe = () => {
             </p>
             <div className={style["divider"]} /> {/* Add a horizontal rule (line) */}
             <div className={`${style["mission"]} flex-row-center`}>
-                <img src={ourMission} alt="Our Mission" />
+                <img className={style['img']} src={ourMission} alt="Our Mission" />
                 <p className={`${style["text"]} space-none size-20px inter margin-12px-H`}>
                     Our mission is to build cutting-edge applications and systems that not only meet but exceed the expectations of our clients. We strive to create user-friendly and seamless experiences that leave a lasting impact on users and businesses alike.
                 </p>
@@ -25,7 +25,7 @@ const WhoAreWe = () => {
                 <p className={`${style["text"]} space-none size-20px inter margin-12px-H`}>
                     We envision a future where technology knows no bounds. We strive to create a world where seamless user experiences, intelligent automation, and intuitive AI systems become an integral part of everyday life. Our vision is to lead the way in shaping the digital landscape, making it accessible and beneficial to all.
                 </p>
-                <img src={ourVision} alt="Our Vision" />
+                <img className={style['img']} src={ourVision} alt="Our Vision" />
             </div>
             <div className={style["divider"]} /> {/* Add a horizontal rule (line) */}
             <h1 className="size-34px pt-sans">What Sets Us Apart ?</h1>

@@ -1,3 +1,4 @@
+/* Your existing CSS styles */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -10,6 +11,30 @@
     }
 }
 
+@keyframes slideInAndRotate {
+    0% {
+        transform: translateX(-100%) rotate(-30deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutAndRotate {
+    0% {
+        transform: translateX(0) rotate(0deg);
+        opacity: 1;
+    }
+
+
+    100% {
+        transform: translateX(-100%) rotate(-30deg);
+        opacity: 0;
+    }
+}
 
 :local {
     .portfolio-slider {
@@ -39,11 +64,6 @@
             padding: 20px;
             box-sizing: border-box;
 
-            img {
-                width: 200px;
-                height: 200px;
-                object-fit: contain;
-            }
 
             .project-circle {
                 width: 15px;
@@ -58,15 +78,52 @@
                 background-color: #007bff;
             }
 
-            .arrow {
-                width: 30px;
-                height: 30px;
-                background-color: #007bff;
-                color: #fff;
-                margin: 0 5px;
-                transition: background-color 0.3s ease-in-out;
+
+
+            .phone-image {
+                position: relative;
+                width: 400px;
+                height: 500px;
+                object-fit: cover;
+                background-image: url('../../assets/images/phone.png');
+                background-size: 400px 500px;
+                animation: slideInAndRotate 3s ease-in-out;
+
+                img {
+                    position: absolute;
+                    width: 270px;
+                    height: 460px;
+                    object-fit: cover;
+                    border-radius: 30px;
+                    top: 10px;
+                    left: 65px;
+                }
             }
 
+            .laptop-image {
+                position: relative;
+                width: 600px;
+                height: 400px;
+                object-fit: fill;
+                background-image: url('../../assets/images/Laptop.png');
+                background-size: 600px 400px;
+                animation: slideInAndRotate 3s ease-in-out;
+
+                img {
+                    width: 560px;
+                    height: 258px;
+                    object-fit: fill;
+                    position: absolute;
+                    top: 22px;
+                    left: 20px;
+
+                }
+
+            }
+
+            .slideOutAndRotate {
+                animation: slideOutAndRotate 3s ease-in-out;
+            }
         }
     }
 

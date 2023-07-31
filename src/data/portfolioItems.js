@@ -5,7 +5,8 @@ const portfolioItems = [
         coverImage: 'https://via.placeholder.com/300',
         title: 'Project 1',
         description: 'This is the first project description.',
-        technologies: ['react', 'nodejs', 'mongodb']
+        technologies: ['react', 'nodejs', 'mongodb'],
+        platform: 'web'
     },
     {
         id: 2,
@@ -13,7 +14,8 @@ const portfolioItems = [
         coverImage: 'https://via.placeholder.com/250',
         title: 'Project 2',
         description: 'This is the second project description.',
-        technologies: ['Flutter', 'Dart', 'Firebase']
+        technologies: ['Flutter', 'Dart', 'Firebase'],
+        platform: 'mobile'
     },
     {
         id: 3,
@@ -21,7 +23,8 @@ const portfolioItems = [
         coverImage: 'https://via.placeholder.com/300',
         title: 'Project 3',
         description: 'This is the third project description.',
-        technologies: ['figma']
+        technologies: ['figma'],
+        platform: 'web'
     },
     {
         id: 4,
@@ -29,7 +32,8 @@ const portfolioItems = [
         coverImage: 'https://via.placeholder.com/200',
         title: 'Project 4',
         description: 'This is the fourth project description.',
-        technologies: ['react', 'nodejs', 'mongodb']
+        technologies: ['react', 'nodejs', 'mongodb'],
+        platform: 'web'
     },
     {
         id: 5,
@@ -37,7 +41,8 @@ const portfolioItems = [
         coverImage: 'https://via.placeholder.com/250',
         title: 'Project 5',
         description: 'This is the fifth project description.',
-        technologies: ['Flutter', 'Dart', 'Firebase']
+        technologies: ['Flutter', 'Dart', 'Firebase'],
+        platform: 'mobile'
     }
     // Add more portfolio items as needed...
 ];

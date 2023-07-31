@@ -51,14 +51,14 @@ export const MainSection = () => {
                         <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                             <span className={`white ${style['banner--tagline']}`}>Welcome to our Portfolio</span>
                             <h1 className={`white ${style['banner--title']}`}>{`Hi! We're Actore`} </h1>
-                            <span className={style['txt-rotate']} dataPeriod="1000" data-rotate='[ "Web Designers", "App Designers", "UI/UX Designers" ]'><span className={`white size-36px ${style['banner--subtitle']}`}>{text}</span></span>
+                            <span className={style['txt-rotate']} dataperiod="1000" data-rotate='[ "Web Designers", "App Designers", "UI/UX Designers" ]'><span className={`white size-36px ${style['banner--subtitle']}`}>{text}</span></span>
                         </div>}
                 </TrackVisibility>
             </div>
             <TrackVisibility>
                 {({ isVisible }) =>
                     <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                        <img src={headerImg} alt="Header Img" />
+                        <img className="flex-row-center" src={headerImg} alt="Header Img" />
                     </div>}
             </TrackVisibility>
         </section>

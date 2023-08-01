@@ -88,6 +88,7 @@
         &-section {
             padding: 20px;
             box-sizing: border-box;
+            overflow: hidden;
 
 
             .project-circle {
@@ -115,7 +116,6 @@
                 background-image: url('../../assets/images/phone.png');
                 background-size: 300px 400px;
                 animation: slideInAndRotate 3s ease-in-out;
-                overflow:hidden ;
 
                 img {
                     position: absolute;
@@ -136,7 +136,18 @@
                 background-image: url('../../assets/images/Laptop.png');
                 background-size: 600px 400px;
                 animation: slideInAndRotate 3s ease-in-out;
-                overflow:hidden ;
+
+                @media (max-width: 1234px) {
+                    width: 400px;
+                    height: 258px;
+                    background-size: 400px 258px;
+                }
+
+                @media (max-width: 397px) {
+                    width: 300px;
+                    height: 258px;
+                    background-size: 300px 258px;
+                }
 
                 img {
                     width: 560px;
@@ -145,6 +156,20 @@
                     position: absolute;
                     top: 22px;
                     left: 20px;
+
+                    @media (max-width: 1234px) {
+                        width: 366px;
+                        height: 167px;
+                        top: 14px;
+                        left: 17px;
+                    }
+
+                    @media (max-width: 397px) {
+                        width: 276px;
+                        height: 166px;
+                        top: 14px;
+                        left: 12px;
+                    }
                 }
 
             }
@@ -156,7 +181,6 @@
                 opacity: 0.5;
                 border-radius: 10px;
                 animation: slideInAndRotateLeft 3s ease-in-out;
-                overflow:hidden ;
 
             }
 

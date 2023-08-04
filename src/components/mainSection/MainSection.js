@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback, useMemo } from "react";
-import headerImg from "../../assets/images/header-img.svg";
+import headerImg from "../../assets/images/Banner1.svg";
 import TrackVisibility from 'react-on-screen';
 import 'animate.css';
 import style from './mainSection.module.scss';
@@ -44,7 +44,7 @@ export const MainSection = () => {
     }, [tick, delta]);
 
     return (
-        <section className={`flex-row-between flex-wrap ${style['banner']}`} id="home">
+        <section className={`flex-row2col  ${style['banner']}`} id="home">
             <div className={``}>
                 <TrackVisibility>
                     {({ isVisible }) =>
@@ -55,10 +55,10 @@ export const MainSection = () => {
                         </div>}
                 </TrackVisibility>
             </div>
-            <TrackVisibility>
+            <TrackVisibility className="headr-img">
                 {({ isVisible }) =>
                     <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                        <img className="flex-row-center" src={headerImg} alt="Header Img" />
+                        <img src={headerImg} alt="Header Img" />
                     </div>}
             </TrackVisibility>
         </section>

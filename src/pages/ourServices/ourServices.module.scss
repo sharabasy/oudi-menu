@@ -17,10 +17,10 @@
         position: relative;
         height: 250px;
         margin: 2px 0;
+        transition: opacity .7s ease-out;
     }
 
     .piece {
-        display: none !important;
         height: 100%;
         margin: 1px;
 
@@ -53,7 +53,7 @@
                 width: 32px;
                 height: 32px;
                 position: absolute;
-                left: calc(30% - 4px);
+                left: calc(30% - 3.5px);
                 border-radius: 50%;
             }
 
@@ -73,7 +73,7 @@
                 width: 32px;
                 height: 32px;
                 position: absolute;
-                right: calc(30% - 4px);
+                right: calc(30% - 3.5px);
                 border-radius: 50%;
             }
         }
@@ -131,6 +131,10 @@
     }
 
     @media (max-width: 992px) {
+        .page {
+            padding: 100px 50px;
+        }
+
         .service {
             height: max-content;
             flex-direction: column;
@@ -199,11 +203,6 @@
             }
         }
     }
-
-    .animate {
-        display: flex !important;
-        animation: animatePiece .5s ease-out;
-    }
 }
 
 @keyframes fadeIn {
@@ -215,17 +214,5 @@
     100% {
         opacity: 1;
         transform: translateY(0);
-    }
-}
-
-@keyframes animatePiece {
-    0% {
-        opacity: 0;
-        transform: translateX(50px) scale(1.2);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0) scale(1);
     }
 }

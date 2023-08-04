@@ -2,6 +2,10 @@
     .page {
         box-sizing: border-box;
         padding: 100px 200px;
+        background-image: url('../../assets/images/banner-bg.png');
+        background-position: top center;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 
     h1 {
@@ -11,18 +15,18 @@
 
     .services {
         align-items: flex-start !important;
+        box-sizing: border-box;
+        padding: 1px;
     }
 
     .service {
+        align-items: stretch !important;
         position: relative;
-        height: 250px;
-        margin: 2px 0;
-        transition: opacity .7s ease-out;
     }
 
     .piece {
-        height: 100%;
         margin: 1px;
+        transition: opacity .7s ease-out;
 
         &--cont {
             text-align: center;
@@ -30,6 +34,11 @@
             padding: 40px;
             position: relative;
             background-color: transparent !important;
+
+            &>img {
+                width: 80%;
+                object-fit: cover;
+            }
         }
 
 
@@ -41,7 +50,7 @@
                 width: 32px;
                 height: 32px;
                 position: absolute;
-                bottom: calc(100% - 5px);
+                bottom: calc(100% - 7px);
                 border-radius: 50%;
 
                 &.r-side {
@@ -61,7 +70,7 @@
                 width: 32px;
                 height: 32px;
                 position: absolute;
-                top: calc(100% - 5px);
+                top: calc(100% - 7px);
                 border-radius: 50%;
 
                 &.r-side {
@@ -111,7 +120,7 @@
                 width: 35px;
                 height: 35px;
                 position: absolute;
-                bottom: -8.5px;
+                bottom: -8px;
                 right: calc(100% - 15% - 18px);
                 border-radius: 50%;
 
@@ -136,7 +145,6 @@
         }
 
         .service {
-            height: max-content;
             flex-direction: column;
             position: unset;
             margin: 0 !important;
@@ -148,7 +156,9 @@
 
         .piece {
             width: 100%;
-            height: max-content;
+            margin: 0 !important;
+            margin-bottom: 2px !important;
+
             position: relative;
 
             &--description--right,
@@ -161,14 +171,14 @@
             &--description--top {
                 right: unset !important;
                 left: unset !important;
-                top: -8.5px !important;
+                top: -9.5px !important;
                 border-radius: 50%;
 
                 &--responsive {
                     width: 35px;
                     height: 35px;
                     position: absolute;
-                    top: -8.5px;
+                    top: -9.5px;
                     border-radius: 50%;
                 }
             }

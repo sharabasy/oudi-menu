@@ -13,10 +13,12 @@
 
 :local {
     .page {
-        background-color: #5f92af;
         box-sizing: border-box;
         padding: 100px 200px;
-        color: #fff;
+        background-image: url('../../assets/images/bg.svg');
+        background-position: top center;
+        background-size: cover;
+        background-repeat: no-repeat;
 
         // Apply the animation to the page
         animation: fadeIn 1s ease-out;
@@ -51,6 +53,36 @@
         height: 1px;
         background-color: #fff; // Set the color of the line here
         margin: 15px 0; // Adjust the spacing around the line as needed
+    }
+
+    @media (max-width: 992px) {
+        .page {
+            padding: 100px 50px;
+        }
+
+        h1 {
+            font-size: 26px !important;
+        }
+
+        h3 {
+            font-size: 18px !important;
+        }
+
+        p {
+            font-size: 14px !important;
+        }
+
+        .img {
+            max-width: 200px;
+        }
+
+        .divider {
+            width: 60%;
+        }
+
+        .vision {
+            flex-direction: column-reverse;
+        }
     }
 }
 

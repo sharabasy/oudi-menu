@@ -22,6 +22,10 @@
 
         // Apply the animation to the page
         animation: fadeIn 1s ease-out;
+
+        &>div {
+           transition: all 1s ease-out;
+        }
     }
 
     h1 {

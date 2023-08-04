@@ -31,7 +31,7 @@
 
     100% {
         transform: translateX(0) rotate(0deg);
-        opacity: .5;
+        opacity: 1;
     }
 }
 
@@ -51,7 +51,7 @@
 @keyframes slideOutAndRotateLeft {
     0% {
         transform: translateX(0) rotate(0deg);
-        opacity: 1.5;
+        opacity: 1;
     }
 
 
@@ -63,21 +63,29 @@
 
 :local {
     .portfolio-slider {
+        position: relative;
+        width: 100%;
+        box-sizing: border-box;
+        padding-bottom: 50px;
+
         &--header {
             text-align: center;
 
             &--title {
-                z-index: 1;
-                padding: 10px;
+                z-index: 2;
                 animation: fadeIn 1s ease-in-out;
+                font-weight: 700;
+                letter-spacing: 0.8px;
+                padding: 8px 10px;
+                background: linear-gradient(90.21deg, rgba(11, 41, 124, 0.5) -5.91%, rgba(88, 61, 209, 0.5) 111.58%);
+                border: 1px solid rgba(255, 255, 255, 0.5);
+                border-radius: 10px;
+                font-size: 20px;
+                margin-bottom: 16px;
+                display: inline-block;
             }
 
-            img {
-                animation: fadeIn 1s ease-in-out;
-                height: 40%;
-                position: absolute;
-                z-index: 0;
-            }
+
 
             &--sub-title {
                 padding: 10px;
@@ -85,29 +93,39 @@
             }
         }
 
+        &--top-wave {
+            position: absolute;
+            top: 0px;
+
+            @media (max-width: 993px) {
+                visibility: hidden;
+            }
+        }
+
+        &--bottom-wave {
+            position: absolute;
+            bottom: 20px;
+        }
+
+        .project-circle {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            margin: 5px;
+            transition: white 0.3s ease-in-out;
+            z-index: 4;
+            transition: background-color 2.5s ease;
+        }
+
+        .active-circle {
+            background-color: #007bff;
+        }
         &-section {
             padding: 20px;
             box-sizing: border-box;
             overflow: hidden;
-
-
-            .project-circle {
-                width: 15px;
-                height: 15px;
-                border-radius: 50%;
-                margin: 5px;
-                transition: white 0.3s ease-in-out;
-                z-index: 2;
-                transition: background-color 2.5s ease;
-                /* Adjust the duration as needed */
-
-            }
-
-            .active-circle {
-                background-color: #007bff;
-            }
-
-
+            height: 100%;
+ 
             .phone-image {
                 position: relative;
                 width: 300px;
@@ -116,6 +134,7 @@
                 background-image: url('../../assets/images/phone.png');
                 background-size: 300px 400px;
                 animation: slideInAndRotate 3s ease-in-out;
+                z-index: 3;
 
                 img {
                     position: absolute;
@@ -125,6 +144,7 @@
                     border-radius: 30px;
                     top: 10px;
                     left: 50px;
+                    z-index: 4;
                 }
             }
 
@@ -136,16 +156,19 @@
                 background-image: url('../../assets/images/Laptop.png');
                 background-size: 600px 400px;
                 animation: slideInAndRotate 3s ease-in-out;
+                background-repeat: no-repeat;
+                background-position: center center;
+                z-index: 3;
 
                 @media (max-width: 1234px) {
                     width: 400px;
-                    height: 258px;
+                    height: 400px;
                     background-size: 400px 258px;
                 }
 
                 @media (max-width: 397px) {
                     width: 300px;
-                    height: 258px;
+                    height: 400px;
                     background-size: 300px 258px;
                 }
 
@@ -156,18 +179,19 @@
                     position: absolute;
                     top: 22px;
                     left: 20px;
+                    z-index: 4;
 
                     @media (max-width: 1234px) {
                         width: 366px;
                         height: 167px;
-                        top: 14px;
+                        top: 84px;
                         left: 17px;
                     }
 
                     @media (max-width: 397px) {
                         width: 276px;
                         height: 166px;
-                        top: 14px;
+                        top: 84px;
                         left: 12px;
                     }
                 }
@@ -178,9 +202,10 @@
                 padding: 20px;
                 box-sizing: border-box;
                 background-color: white;
-                opacity: 0.5;
+                opacity: 1;
                 border-radius: 10px;
                 animation: slideInAndRotateLeft 3s ease-in-out;
+                z-index: 3;
 
             }
 

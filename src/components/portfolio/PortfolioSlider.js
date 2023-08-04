@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import style from './portfolioSlider.module.scss';
-import tag from '../../assets/images/tag.svg';
 import portfolioItems from '../../data/portfolioItems.js';
 
 const PortfolioSlider = () => {

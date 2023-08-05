@@ -6,6 +6,15 @@
         background-position: top center;
         background-size: cover;
         background-repeat: no-repeat;
+        position: relative;
+        z-index: 2;
+        margin-bottom: 100px;
+    }
+
+    .wave {
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
     }
 
     h1 {
@@ -17,6 +26,7 @@
         align-items: flex-start !important;
         box-sizing: border-box;
         padding: 1px;
+        z-index: 2;
     }
 
     .service {
@@ -44,7 +54,7 @@
 
         &--head {
             width: 30%;
-            z-index: 2;
+            z-index: 4;
 
             &--top {
                 width: 32px;
@@ -89,7 +99,7 @@
 
         &--description {
             width: 70%;
-            z-index: 0;
+            z-index: 3;
 
             &>div {
                 background-color: white;

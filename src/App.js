@@ -8,6 +8,7 @@ import KeepInTouchForm from "./components/keepInTouchForm/KeepInTouchForm";
 import Footer from './components/footer/Footer';
 
 import style from './app.module.scss';
+import ChatButton from "./components/buttons/ChatButton";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
       <Navbar />
       <Outlet />
       <WhatsAppButton />
-      {/* Chat Button */}
+      <ChatButton />
       <KeepInTouchForm />
       <Footer />
     </div>

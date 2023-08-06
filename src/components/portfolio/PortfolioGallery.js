@@ -27,7 +27,7 @@ const PortfolioGallery = () => {
                     onMouseLeave={handleProjectHoverLeave}
                 >
                     <motion.img
-                        src={project.coverImage}
+                        src={project.projectImages[0]}
                         alt={`Cover for ${project.title}`}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -42,7 +42,7 @@ const PortfolioGallery = () => {
                             transition={{ duration: 0.2 }}
                         >
                             <div className={`size-24px inter font-bold margin-5px-V`}> {project.title} </div>
-                            <div className={`size-16px`}>{project.description}</div>
+                            <div className={`margin-6px-V size-16px`}>{project.description}</div>
                             <div className={`flex-row-center ${style["technology-tags"]}`}>
                                 {project.technologies.map((technology) => (
                                     <div

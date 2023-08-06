@@ -102,10 +102,9 @@
             }
         }
 
-        &--bottom-wave {
-            position: absolute;
-            bottom: 20px;
-        }
+
+
+
 
         .project-circle {
             width: 15px;
@@ -120,12 +119,13 @@
         .active-circle {
             background-color: #007bff;
         }
+
         &-section {
-            padding: 20px;
+            padding: 20px 20px 0px 20px;
             box-sizing: border-box;
             overflow: hidden;
             height: 100%;
- 
+
             .phone-image {
                 position: relative;
                 width: 300px;
@@ -133,7 +133,7 @@
                 object-fit: cover;
                 background-image: url('../../assets/images/phone.png');
                 background-size: 300px 400px;
-                animation: slideInAndRotate 3s ease-in-out;
+                animation: slideInAndRotate 1s ease-in-out;
                 z-index: 3;
 
                 img {
@@ -155,7 +155,7 @@
                 object-fit: fill;
                 background-image: url('../../assets/images/Laptop.png');
                 background-size: 600px 400px;
-                animation: slideInAndRotate 3s ease-in-out;
+                animation: slideInAndRotate 1s ease-in-out;
                 background-repeat: no-repeat;
                 background-position: center center;
                 z-index: 3;
@@ -204,7 +204,7 @@
                 background-color: white;
                 opacity: 1;
                 border-radius: 10px;
-                animation: slideInAndRotateLeft 3s ease-in-out;
+                animation: slideInAndRotateLeft 1s ease-in-out;
                 z-index: 3;
 
             }

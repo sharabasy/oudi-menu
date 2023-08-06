@@ -52,7 +52,7 @@ const PortfolioSlider = () => {
                         <p>{currentProject.description}</p>
                     </div>
                 </div>
-                <div className={`full-width flex-row-center`}>
+                <div className={`full-width flex-row-center ${style['project-circles']}`}>
                     {portfolioItems.map((project, index) => (
                         <div
                             key={project.id}
@@ -63,9 +63,9 @@ const PortfolioSlider = () => {
                     ))}
                 </div>
             </div>
-            <svg className={style['portfolio-slider--bottom-wave']} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                <text x="20" y="160" fill="white" fontSize="24">test</text>
-                <path fill={currentProject.backgroundColor} fillOpacity="1" d="M0,160L60,176C120,192,240,224,360,229.3C480,235,600,213,720,218.7C840,224,960,256,1080,250.7C1200,245,1320,203,1380,181.3L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+            <svg className={style['portfolio-slider--bottom-wave']} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 380">
+                <path fill={currentProject.backgroundColor} d="m0,255l48,-5.3c48,-5.7 144,-15.7 240,10.6c96,26.7 192,90.7 288,106.7c96,16 192,-16 288,-53.3c96,-37.7 192,-79.7 288,-69.4c96,10.7 192,74.7 240,106.7l48,32l0,-256l-48,0c-48,0 -144,0 -240,0c-96,0 -192,0 -288,0c-96,0 -192,0 -288,0c-96,0 -192,0 -288,0c-96,0 -192,0 -240,0l-48,0l0,128z" id="svg_1" />
+                <path fill={currentProject.backgroundColor} d="m0,0l60,16c60,16 180,48 300,53.3c120,5.7 240,-16.3 360,-10.6c120,5.3 240,37.3 360,32c120,-5.7 240,-47.7 300,-69.4l60,-21.3l0,160l-60,0c-60,0 -180,0 -300,0c-120,0 -240,0 -360,0c-120,0 -240,0 -360,0c-120,0 -240,0 -300,0l-60,0l0,-160z" id="svg_2" />
             </svg>
 
         </div>

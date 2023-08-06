@@ -9,6 +9,7 @@
         position: relative;
         z-index: 2;
         margin-bottom: 100px;
+        min-height: 100vh;
     }
 
     .wave {
@@ -25,18 +26,16 @@
     .services {
         align-items: flex-start !important;
         box-sizing: border-box;
-        padding: 1px;
         z-index: 2;
     }
 
     .service {
         align-items: stretch !important;
-        position: relative;
     }
 
     .piece {
         margin: 1px;
-        transition: opacity .7s ease-out;
+        position: relative;
 
         &--cont {
             text-align: center;
@@ -46,7 +45,7 @@
             background-color: transparent !important;
 
             &>img {
-                width: 80%;
+                max-width: 70%;
                 object-fit: cover;
             }
         }
@@ -60,11 +59,13 @@
                 width: 32px;
                 height: 32px;
                 position: absolute;
-                bottom: calc(100% - 7px);
+                top: -27px;
+                left: 9.6vw;
                 border-radius: 50%;
 
                 &.r-side {
-                    right: calc(15% - 16px);
+                    left: unset;
+                    right: 9.6vw;
                 }
             }
 
@@ -72,7 +73,9 @@
                 width: 32px;
                 height: 32px;
                 position: absolute;
-                left: calc(30% - 3.5px);
+                right: -27px;
+                top: 50%;
+                transform: translateY(-50%);
                 border-radius: 50%;
             }
 
@@ -80,11 +83,13 @@
                 width: 32px;
                 height: 32px;
                 position: absolute;
-                top: calc(100% - 7px);
+                bottom: -27px;
+                left: 9.6vw;
                 border-radius: 50%;
 
                 &.r-side {
-                    right: calc(15% - 16px);
+                    left: unset;
+                    right: 9.6vw;
                 }
             }
 
@@ -92,7 +97,9 @@
                 width: 32px;
                 height: 32px;
                 position: absolute;
-                right: calc(30% - 3.5px);
+                left: -27px;
+                top: 50%;
+                transform: translateY(-50%);
                 border-radius: 50%;
             }
         }
@@ -109,12 +116,13 @@
                 width: 35px;
                 height: 35px;
                 position: absolute;
-                top: -8px;
-                right: calc(100% - 15% - 18px);
+                top: -8.5px;
+                left: 9.5vw;
                 border-radius: 50%;
 
                 &.r-side {
-                    right: calc(15% - 17.5px);
+                    left: unset;
+                    right: 9.5vw;
                 }
             }
 
@@ -122,7 +130,9 @@
                 width: 35px;
                 height: 35px;
                 position: absolute;
-                right: calc(30% - 5px);
+                right: -8px;
+                top: 50%;
+                transform: translateY(-50%);
                 border-radius: 50%;
             }
 
@@ -130,12 +140,13 @@
                 width: 35px;
                 height: 35px;
                 position: absolute;
-                bottom: -8px;
-                right: calc(100% - 15% - 18px);
+                bottom: -8.5px;
+                left: 9.5vw;
                 border-radius: 50%;
 
                 &.r-side {
-                    right: calc(15% - 17.5px);
+                    left: unset;
+                    right: 9.5vw;
                 }
             }
 
@@ -143,7 +154,9 @@
                 width: 35px;
                 height: 35px;
                 position: absolute;
-                left: calc(30% - 5px);
+                left: -8px;
+                top: 50%;
+                transform: translateY(-50%);
                 border-radius: 50%;
             }
         }
@@ -154,10 +167,12 @@
             padding: 100px 50px;
         }
 
+        .services {
+            padding: 1px;
+        }
+
         .service {
             flex-direction: column;
-            position: unset;
-            margin: 0 !important;
 
             &.reverse {
                 flex-direction: column-reverse;
@@ -166,10 +181,7 @@
 
         .piece {
             width: 100%;
-            margin: 0 !important;
-            margin-bottom: 2px !important;
-
-            position: relative;
+            margin: 1px 0 !important;
 
             &--description--right,
             &--description--left,
@@ -179,37 +191,45 @@
             }
 
             &--description--top {
-                right: unset !important;
                 left: unset !important;
-                top: -9.5px !important;
+                right: unset !important;
+                right: 50% !important;
+                transform: translateX(50%) !important;
+                top: -8.5px !important;
                 border-radius: 50%;
 
                 &--responsive {
                     width: 35px;
                     height: 35px;
                     position: absolute;
-                    top: -9.5px;
+                    top: -8.5px;
                     border-radius: 50%;
                 }
             }
 
             &--description--bottom {
-                right: unset !important;
                 left: unset !important;
+                right: unset !important;
+                right: 50% !important;
+                transform: translateX(50%) !important;
                 bottom: -8.5px;
                 border-radius: 50%;
             }
 
             &--head--top {
-                right: unset !important;
                 left: unset !important;
+                right: unset !important;
+                right: 50% !important;
+                transform: translateX(50%) !important;
                 top: -27px !important;
                 border-radius: 50%;
             }
 
             &--head--bottom {
-                right: unset !important;
                 left: unset !important;
+                right: unset !important;
+                right: 50% !important;
+                transform: translateX(50%) !important;
                 bottom: -27px !important;
                 border-radius: 50%;
 
@@ -223,16 +243,16 @@
             }
         }
     }
-}
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            transform: translateY(30px);
+        }
 
-    100% {
-        opacity: 1;
-        transform: translateY(0);
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 }

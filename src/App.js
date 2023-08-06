@@ -10,13 +10,14 @@ import Footer from './components/footer/Footer';
 import style from './app.module.scss';
 import ChatButton from "./components/buttons/ChatButton";
 
-function App() {
+const App = () => {
   return (
     <div className={`${style['App']} white-bg`}>
       <Navbar />
-      <Outlet />
       <WhatsAppButton />
       <ChatButton />
+      
+      <Outlet />
       <KeepInTouchForm />
       <Footer />
     </div>

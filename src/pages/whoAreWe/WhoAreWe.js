@@ -17,11 +17,13 @@ const WhoAreWe = () => {
 
     return (
         <div className={`${style["page"]} full-width flex-col-top-start`}>
-            <h1 className="size-34px pt-sans">Who Are We ?</h1>
-            <p className="space-none size-18px open-sans">Welcome to [Our Agency Name]!</p>
-            <p className={`${style['text']} size-18px open-sans`}>
-                We are a team of passionate and skilled developers, dedicated to creating innovative solutions and pushing the boundaries of technology. With expertise in various domains, we bring a diverse set of skills to the table, allowing us to tackle complex projects and deliver exceptional results.
-            </p>
+            <div data-aos='fade-up' className='full-width flex-col-center'>
+                <h1 className="size-34px pt-sans">Who Are We ?</h1>
+                <p className="space-none size-18px open-sans">Welcome to [Our Agency Name]!</p>
+                <p className={`${style['text']} size-18px open-sans`}>
+                    We are a team of passionate and skilled developers, dedicated to creating innovative solutions and pushing the boundaries of technology. With expertise in various domains, we bring a diverse set of skills to the table, allowing us to tackle complex projects and deliver exceptional results.
+                </p>
+            </div>
             <div data-aos='fade-up' className={style["divider"]} /> {/* Add a horizontal rule (line) */}
             <div data-aos='fade-up' className={`${style["mission"]} white flex-row-between2col`}>
                 <img className={style['img']} src={ourMission} alt="Our Mission" />

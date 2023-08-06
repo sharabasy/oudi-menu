@@ -12,7 +12,7 @@ const PortfolioSlider = () => {
             setTimeout(() => {
                 setCurrentIndex((prevIndex) => (prevIndex + 1) % portfolioItems.length);
                 setIsLeaving(false);
-            }, 2500);
+            }, 800);
         };
 
         const intervalId = setInterval(rotateToNextProject, 5000);
@@ -25,7 +25,7 @@ const PortfolioSlider = () => {
         setTimeout(() => {
             setCurrentIndex(index);
             setIsLeaving(false);
-        }, 1000);
+        }, 800);
     };
 
     const currentProject = portfolioItems[currentIndex];

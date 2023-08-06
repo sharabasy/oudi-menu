@@ -1,6 +1,16 @@
 import project1Cover from '../assets/images/Modern React eCommerce Application for Furniture Stores(cover).png';
 import project1Image1 from '../assets/images/Modern React eCommerce Application for Furniture Stores.png';
 
+import FlutterEbook from '../assets/images/FlutterEbook.jpeg';
+
+import InteriorDecorationDesignAppCover from '../assets/images/Interior Decoration Design App(cover).jpeg';
+import InteriorDecorationDesignAppImage1 from '../assets/images/Interior Decoration Design App.jpeg';
+
+// import ECommerceCover from '../assets/images/E-commerce Application(cover).jpeg';
+import ECommerceImage1 from '../assets/images/E-commerce Application.jpeg';
+
+import FoodDeliveryCover from '../assets/images/Food Delivery(cover).jpeg';
+import FoodDeliveryImage1 from '../assets/images/Food Delivery.jpeg';
 
 const portfolioItems = [
     {
@@ -18,12 +28,12 @@ const portfolioItems = [
     {
         id: 2,
         backgroundColor: '#f79d65',
-        coverImage: 'https://via.placeholder.com/450',
-        title: 'Project 2',
-        description: 'This is the second project description.',
+        coverImage: FlutterEbook,
+        title: 'Flutter Ebook Application',
+        description: 'The comprehensive ebook application that brings your favorite literary worlds to your fingertips. Dive into a vast collection of digital books, magazines, and comics with a user-friendly interface, providing an immersive reading experience like never before.',
         technologies: ['Flutter', 'Dart', 'Firebase'],
         projectImages : [
-            'https://via.placeholder.com/400',
+            FlutterEbook,
             'https://via.placeholder.com/300',
             'https://via.placeholder.com/300',
         ],
@@ -32,40 +42,40 @@ const portfolioItems = [
     {
         id: 3,
         backgroundColor: '#f4845f',
-        coverImage: 'https://via.placeholder.com/300',
-        title: 'Project 3',
-        description: 'This is the third project description.',
+        coverImage: InteriorDecorationDesignAppCover,
+        title: 'Interior Decoration Design App',
+        description: 'The ultimate interior design app that brings you a seamless shopping experience with a variety of essential screens to cater to all your needs. With a user-friendly interface and powerful features, FlutterShop is here to revolutionize your online shopping journey.',
         technologies: ['figma'],
         projectImages : [
-            'https://via.placeholder.com/300',
+            InteriorDecorationDesignAppImage1,
             'https://via.placeholder.com/300',
             'https://via.placeholder.com/300',
         ],
-        platform: 'web'
+        platform: 'mobile'
     },
     {
         id: 4,
         backgroundColor: '#f27059',
-        coverImage: 'https://via.placeholder.com/200',
-        title: 'Project 4',
-        description: 'This is the fourth project description.',
-        technologies: ['react', 'nodejs', 'mongodb'],
+        coverImage: ECommerceImage1,
+        title: 'E-commerce Application',
+        description: 'The ultimate all-in-one e-commerce app that brings you a seamless shopping experience with a variety of essential screens to cater to all your needs. With a user-friendly interface and powerful features, FlutterShop is here to revolutionize your online shopping journey.',
+        technologies: ['flutter', 'dart','mongodb'],
         projectImages : [
-            'https://via.placeholder.com/300',
+            ECommerceImage1,
             'https://via.placeholder.com/300',
             'https://via.placeholder.com/300',
         ],
-        platform: 'web'
+        platform: 'mobile'
     },
     {
         id: 5,
         backgroundColor: '#f25c54',
-        coverImage: 'https://via.placeholder.com/250',
-        title: 'Project 5',
-        description: 'This is the fifth project description.',
+        coverImage: FoodDeliveryCover,
+        title: 'Food Delivery Application',
+        description: 'Your go-to food delivery app designed to bring a delectable selection of cuisines right to your doorstep. With a user-friendly interface and an array of features,this appliction guarantees a convenient and delightful dining experience like never before.',
         technologies: ['Flutter', 'Dart', 'Firebase'],
         projectImages : [
-            'https://via.placeholder.com/300',
+            FoodDeliveryImage1,
             'https://via.placeholder.com/300',
             'https://via.placeholder.com/300',
         ],

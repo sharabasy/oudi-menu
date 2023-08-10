@@ -2,6 +2,9 @@ import React, { useState, useEffect, useCallback, useMemo } from "react";
 import headerImg from "../../assets/images/Banner1.svg";
 import TrackVisibility from 'react-on-screen';
 import 'animate.css';
+import { useSelector } from "react-redux";
+import languages from "../../data/languages";
+
 import style from './mainSection.module.scss';
 
 export const MainSection = () => {
@@ -10,8 +13,11 @@ export const MainSection = () => {
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300 - Math.random() * 100);
 
+    const lang = useSelector(state => state.language.language);
+    const translate = languages[lang];
+
     // Initialize the 'toRotate' array using useMemo
-    const toRotate = useMemo(() => ["Web Designers", "App Designers", "UI/UX Designers"], []);
+    const toRotate = useMemo(() => [translate.webDesigners, translate.appDesigners, translate.uiuxDesigners], [translate]);
 
     const tick = useCallback(() => {
         let i = loopNum % toRotate.length;
@@ -44,17 +50,15 @@ export const MainSection = () => {
     }, [tick, delta]);
 
     return (
-        <section className={`flex-row2col  ${style['banner']}`} id="home">
-            <div className={``}>
-                <TrackVisibility>
-                    {({ isVisible }) =>
-                        <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                            <span className={`white ${style['banner--tagline']}`}>Welcome to our Portfolio</span>
-                            <h1 className={`white ${style['banner--title']}`}>{`Hi! We're Actore`} </h1>
-                            <span className={style['txt-rotate']} dataperiod="1000" data-rotate='[ "Web Designers", "App Designers", "UI/UX Designers" ]'><span className={`white size-36px ${style['banner--subtitle']}`}>{text}</span></span>
-                        </div>}
-                </TrackVisibility>
-            </div>
+        <section className={`flex-row2col ${style['banner']}`} id="home">
+            <TrackVisibility>
+                {({ isVisible }) =>
+                    <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                        <span className={`white ${style['banner--tagline']} shadow-2px size-20px radius-15px`}>{translate.welcomeToOurPortfolio}</span>
+                        <h1 className={`white ${style['banner--title']}`}>{translate.hiWereActore} </h1>
+                        <span className={style['txt-rotate']} dataperiod="1000" data-rotate={[translate.webDesigners, translate.appDesigners, translate.uiuxDesigners]}><span className={`white size-36px ${style['banner--subtitle']}`}>{text}</span></span>
+                    </div>}
+            </TrackVisibility>
             <TrackVisibility className="headr-img">
                 {({ isVisible }) =>
                     <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>

@@ -1,17 +1,39 @@
-$shadow: rgba($color: #737373, $alpha: 0.25);
+$shadow_en: rgba(68, 68, 68, 0.7);
+$shadow_ar: rgba(68, 68, 68, 0.7); // Shadow in Arabic
 
 .shadow-2px {
-    box-shadow: 2px 2px 5px $shadow;
+    box-shadow: 2px 2px 5px $shadow_en;
 }
 
 .shadow-5px {
-    box-shadow: 5px 5px 10px $shadow;
+    box-shadow: 5px 5px 10px $shadow_en;
 }
 
 .shadow-10px {
-    box-shadow: 10px 10px 15px $shadow;
+    box-shadow: 10px 10px 15px $shadow_en;
 }
 
 .text-shadow {
-    text-shadow: 2px 2px 3px $shadow;
+    text-shadow: 2px 2px 3px $shadow_en;
+}
+
+// Arabic localization
+[dir="rtl"] {
+    $shadow_ar: rgba(68, 68, 68, 0.7); // Shadow in Arabic
+
+    .shadow-2px {
+        box-shadow: -2px 2px 5px $shadow_ar; // Flipped for RTL
+    }
+
+    .shadow-5px {
+        box-shadow: -5px 5px 10px $shadow_ar; // Flipped for RTL
+    }
+
+    .shadow-10px {
+        box-shadow: -10px 10px 15px $shadow_ar; // Flipped for RTL
+    }
+
+    .text-shadow {
+        text-shadow: -2px 2px 3px $shadow_ar; // Flipped for RTL
+    }
 }

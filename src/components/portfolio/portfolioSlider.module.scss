@@ -1,72 +1,9 @@
-/* Your existing CSS styles */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideInAndRotate {
-    0% {
-        transform: translateX(-100%) rotate(-30deg);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateX(0) rotate(0deg);
-        opacity: 1;
-    }
-}
-
-@keyframes slideInAndRotateLeft {
-    0% {
-        transform: translateX(100%) rotate(30deg);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateX(0) rotate(0deg);
-        opacity: 1;
-    }
-}
-
-@keyframes slideOutAndRotate {
-    0% {
-        transform: translateX(0) rotate(0deg);
-        opacity: 1;
-    }
-
-
-    100% {
-        transform: translateX(-100%) rotate(-30deg);
-        opacity: 0;
-    }
-}
-
-@keyframes slideOutAndRotateLeft {
-    0% {
-        transform: translateX(0) rotate(0deg);
-        opacity: 1;
-    }
-
-
-    100% {
-        transform: translateX(100%) rotate(30deg);
-        opacity: 0;
-    }
-}
-
 :local {
     .portfolio-slider {
         position: relative;
-        width: 100%;
         box-sizing: border-box;
-        padding-bottom: 50px;
+        padding: 50px 0;
+        direction: ltr;
 
         &--header {
             text-align: center;
@@ -76,16 +13,11 @@
                 animation: fadeIn 1s ease-in-out;
                 font-weight: 700;
                 letter-spacing: 0.8px;
-                padding: 8px 10px;
+                padding: 10px 12px;
                 background: linear-gradient(90.21deg, rgba(11, 41, 124, 0.5) -5.91%, rgba(88, 61, 209, 0.5) 111.58%);
-                border: 1px solid rgba(255, 255, 255, 0.5);
-                border-radius: 10px;
-                font-size: 20px;
-                margin-bottom: 16px;
+                margin-bottom: 30px;
                 display: inline-block;
             }
-
-
 
             &--sub-title {
                 padding: 10px;
@@ -102,21 +34,19 @@
             }
         }
 
-
-
-
-
         .project-circle {
             width: 15px;
             height: 15px;
             border-radius: 50%;
             margin: 5px;
+            border: 1px inset #007bff;
             transition: white 0.3s ease-in-out;
             z-index: 4;
             transition: background-color 2.5s ease;
         }
 
         .active-circle {
+            border-style: solid;
             background-color: #007bff;
         }
 
@@ -219,4 +149,66 @@
         }
     }
 
+    /* Your existing CSS styles */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes slideInAndRotate {
+        0% {
+            transform: translateX(-100%) rotate(-30deg);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateX(0) rotate(0deg);
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideInAndRotateLeft {
+        0% {
+            transform: translateX(100%) rotate(30deg);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateX(0) rotate(0deg);
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideOutAndRotate {
+        0% {
+            transform: translateX(0) rotate(0deg);
+            opacity: 1;
+        }
+
+
+        100% {
+            transform: translateX(-100%) rotate(-30deg);
+            opacity: 0;
+        }
+    }
+
+    @keyframes slideOutAndRotateLeft {
+        0% {
+            transform: translateX(0) rotate(0deg);
+            opacity: 1;
+        }
+
+
+        100% {
+            transform: translateX(100%) rotate(30deg);
+            opacity: 0;
+        }
+    }
 }

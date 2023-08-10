@@ -2,27 +2,12 @@ import React, { useState } from "react";
 import ChatBot from 'react-simple-chatbot';
 import { ThemeProvider } from 'styled-components';
 
-import steps from './chatSteps';
+import steps from '../../data/chatSteps';
+
+import languages from "../../data/languages";
+import { useSelector } from "react-redux";
 
 import style from './chatButton.module.scss';
-
-// const steps = [
-//     {
-//         id: '1',
-//         message: 'What is your name?',
-//         trigger: '2',
-//     },
-//     {
-//         id: '2',
-//         user: true,
-//         trigger: '3',
-//     },
-//     {
-//         id: '3',
-//         message: 'Hi {previousValue}, nice to meet you!',
-//         end: true,
-//     },
-// ];
 
 // Creating our own theme
 const theme = {
@@ -39,6 +24,11 @@ const theme = {
 const ChatButton = () => {
     const [chatShown, setChatShown] = useState(false);
 
+    const lang = useSelector(state => state.language.language);
+    const translate = languages[lang];
+
+    const chatSteps = steps[lang];
+
     const toggleChat = () => {
         setChatShown(!chatShown);
     }
@@ -48,7 +38,7 @@ const ChatButton = () => {
             <div className={`${chatShown ? 'gray-bg' : 'baby-blue-bg'} ${style['chat--btn']} flex-row-center pointer radius-circular shadow-5px`} onClick={toggleChat}>
                 <i className={`${chatShown ? 'bi bi-x size-36px' : 'bi bi-chat-fill size-32px'} white`} />
                 <div className={`${style['chat--btn--tag']} flex-row-center white inter size-12px radius-5px shadow-5px`}>
-                    {chatShown ? 'Close' : 'Chat'}
+                    {chatShown ? translate.close : translate.chat}
                 </div>
             </div>
             <ThemeProvider theme={theme}>
@@ -56,10 +46,11 @@ const ChatButton = () => {
                     className={`${style['icon']} open-sans`}
                     style={{ left: '70px', bottom: '70px', transformOrigin: 'bottom left' }}
                     floating={true}
-                    headerTitle="Chat"
+                    headerTitle={translate.chat}
                     enableSmoothScroll
                     enableMobileAutoFocus
-                    steps={steps}
+                    placeholder={translate.typeYourMessageHere}
+                    steps={chatSteps}
                     opened={chatShown}
                     floatingIcon={null}
                     toggleFloating={toggleChat}

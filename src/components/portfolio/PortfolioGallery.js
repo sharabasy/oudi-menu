@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import style from "./portfolioGallery.module.scss";
 import portfolioItems from "../../data/portfolioItems.js";
+import { useSelector } from "react-redux";
+
+import style from "./portfolioGallery.module.scss";
 
 const PortfolioGallery = () => {
     const [selectedProject, setSelectedProject] = useState(null);
@@ -14,9 +16,13 @@ const PortfolioGallery = () => {
         setSelectedProject(null);
     };
 
+    const lang = useSelector((state) => state.language.language);
+
+    const portfolio = portfolioItems[lang];
+
     return (
         <div className={style["portfolio-gallery"]}>
-            {portfolioItems.map((project, index) => (
+            {portfolio.map((project, index) => (
                 <motion.div
                     key={project.id}
                     className={style["portfolio-gallery--item"]}

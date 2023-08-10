@@ -1,45 +1,50 @@
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 :local {
     .our-partners {
-        &--header{
+        &--header {
             text-align: center;
             z-index: 1;
-            &--title{
+
+            &--title {
                 z-index: 1;
                 padding: 10px;
                 animation: fadeIn 1s ease-in-out;
             }
-            img{
+
+            img {
                 animation: fadeIn 1s ease-in-out;
                 height: 40%;
                 position: absolute;
                 z-index: 0;
             }
-            &--sub-title{
+
+            &--sub-title {
                 padding: 10px;
                 animation: fadeIn 2s ease-in-out;
             }
         }
+
         &--slot {
             padding: .5rem;
             animation: fadeIn 1s ease-in-out;
+
             img {
                 background-color: rgb(241, 239, 239);
                 width: 200px;
                 height: 200px;
                 object-fit: contain;
             }
+        }
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
         }
     }
 }

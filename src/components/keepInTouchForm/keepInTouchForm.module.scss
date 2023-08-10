@@ -26,10 +26,9 @@
             &--side {
                 width: 11%;
                 height: 100%;
-                margin-right: 2px;
+                margin: 2px;
                 box-sizing: border-box;
                 padding: 50px 0px;
-                box-shadow: 5px 5px 10px #444;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -46,8 +45,7 @@
                 height: 100%;
                 box-sizing: border-box;
                 padding: 30px 50px;
-                margin-left: 2px;
-                box-shadow: 5px 5px 10px #444;
+                margin: 2px;
 
                 &--form {
                     position: relative;
@@ -119,15 +117,37 @@
         animation: newPost 1s ease-out forwards;
     }
 
+    .withPostMan-enter-active-ar {
+        transform-origin: top right;
+        animation: newPostAR 1s ease-out forwards;
+    }
+
     .withPostMan-exit-active {
         transform-origin: bottom left;
         animation: sendPost 1s ease-out forwards;
+    }
+
+    .withPostMan-exit-active-ar {
+        transform-origin: bottom right;
+        animation: sendPostAR 1s ease-out forwards;
     }
 
     @keyframes newPost {
         0% {
             opacity: 0;
             transform: rotateZ(-30deg);
+        }
+
+        100% {
+            opacity: 1;
+            transform: rotateZ(0deg);
+        }
+    }
+
+    @keyframes newPostAR {
+        0% {
+            opacity: 0;
+            transform: rotateZ(30deg);
         }
 
         100% {
@@ -143,6 +163,20 @@
 
         50% {
             transform: rotateZ(30deg) translateY(0px);
+        }
+
+        100% {
+            transform: translateY(2000px);
+        }
+    }
+
+    @keyframes sendPostAR {
+        0% {
+            transform: rotateZ(0deg) translateY(0px);
+        }
+
+        50% {
+            transform: rotateZ(-30deg) translateY(0px);
         }
 
         100% {

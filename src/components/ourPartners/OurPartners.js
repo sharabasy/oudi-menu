@@ -1,6 +1,11 @@
 import React, { useState, useEffect, useMemo } from "react";
-import style from './ourPartners.module.scss';
 import tag from '../../assets/images/tag.svg';
+
+import { useSelector } from "react-redux";
+import languages from "../../data/languages";
+
+import style from './ourPartners.module.scss';
+
 const OurPartners = () => {
     const partners = useMemo(() => [
         {
@@ -51,15 +56,18 @@ const OurPartners = () => {
         return () => clearInterval(timer); // Clean up the timer when the component unmounts
     }, [partners]);
 
+    const lang = useSelector(state => state.language.language);
+    const translate = languages[lang];
+
     return (
         <div className={`full-width ${style['our-partners']}`}>
             <div className={`full-width flex-row-center ${style['our-partners--header']}`}>
                 <div className={`inter size-32px ${style['our-partners--header--title']}`}>
-                    Our Partners
+                    {translate.ourPartners}
                 </div>
                 <img src={tag} alt="background of header" />
             </div>
-            <div className={`inter size-14px flex-row-center gray ${style['our-partners--header--sub-title']}`}>Stories that started with trust given to us by our customers and continued thanks to our belief in them.</div>
+            <div className={`inter size-14px flex-row-center gray ${style['our-partners--header--sub-title']}`}>{translate.ourPartnersDescription}</div>
             <div className="full-width flex-row-center flex-wrap">
                 {partners.slice(0, showPartners).map((partner, index) => (
                     <div key={index} className={`${style['our-partners--slot']}`}>

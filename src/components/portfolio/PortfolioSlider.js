@@ -1,16 +1,31 @@
 import React, { useState, useEffect } from "react";
-import style from './portfolioSlider.module.scss';
 import portfolioItems from '../../data/portfolioItems.js';
+import { useSelector } from "react-redux";
+import languages from "../../data/languages.js";
+
+import style from './portfolioSlider.module.scss';
 
 const PortfolioSlider = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isLeaving, setIsLeaving] = useState(false);
 
+    const lang = useSelector(state => state.language.language);
+    const translate = languages[lang];
+
+    const portfolio = portfolioItems[lang];
+
     useEffect(() => {
         const rotateToNextProject = () => {
             setIsLeaving(true);
             setTimeout(() => {
-                setCurrentIndex((prevIndex) => (prevIndex + 1) % portfolioItems.length);
+                if (lang === 'en') {
+                    setCurrentIndex((prevIndex) => (prevIndex + 1) % portfolio.length);
+                } else {
+                    setCurrentIndex((prevIndex) => (prevIndex - 1) % portfolio.length);
+                    if (currentIndex === 0) {
+                        setCurrentIndex(portfolio.length - 1);
+                    }
+                }
                 setIsLeaving(false);
             }, 800);
         };
@@ -18,7 +33,7 @@ const PortfolioSlider = () => {
         const intervalId = setInterval(rotateToNextProject, 5000);
 
         return () => clearInterval(intervalId);
-    }, [isLeaving, currentIndex]);
+    }, [isLeaving, currentIndex, portfolio.length, lang]);
 
     const handleSlideClick = (index) => {
         setIsLeaving(true);
@@ -28,13 +43,13 @@ const PortfolioSlider = () => {
         }, 800);
     };
 
-    const currentProject = portfolioItems[currentIndex];
+    const currentProject = portfolio[currentIndex];
 
     return (
-        <div className={`${style['portfolio-slider']}`}>
+        <div className={`${style['portfolio-slider']} full-width`}>
             <div className={`full-width flex-row-center ${style['portfolio-slider--header']}`}>
-                <div className={`inter size-32px white ${style['portfolio-slider--header--title']}`}>
-                    Our Work
+                <div className={`inter size-32px white ${style['portfolio-slider--header--title']} radius-15px shadow-5px`}>
+                    {translate.ourWork}
                 </div>
             </div>
             <svg className={`${style['portfolio-slider--top-wave']}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -53,10 +68,10 @@ const PortfolioSlider = () => {
                     </div>
                 </div>
                 <div className={`full-width flex-row-center ${style['project-circles']}`}>
-                    {portfolioItems.map((project, index) => (
+                    {portfolio.map((project, index) => (
                         <div
                             key={project.id}
-                            className={`${style['project-circle']} pointer white-bg radius-circular shadow-5px ${currentIndex === index ? style['active-circle'] : ''
+                            className={`${style['project-circle']} pointer white-bg radius-circular ${currentIndex === index ? style['active-circle'] : ''
                                 }`}
                             onClick={() => handleSlideClick(index)}
                         />

@@ -1,12 +1,18 @@
 import React from "react";
 
+import { useSelector } from "react-redux";
+import languages from "../../data/languages";
+
 import style from './footer.module.scss';
 
 const Footer = () => {
+    const lang = useSelector(state => state.language.language);
+    const translate = languages[lang];
+
     return (
         <div className={`${style['footer']} white-bg flex-col-center`}>
             <div className={`${style['footer--address']} flex-row-center margin-2px-V`}>
-                <p className="inter dark-blue size-14px"><i className="bi bi-geo-alt size-22px"></i> Abd El-Moneim Riad Street, Freebur Building, Portsaid, Egypt.</p>
+                <p className="inter dark-blue size-14px"><i className="bi bi-geo-alt size-22px"></i> {translate.ourAddress}</p>
             </div>
             <div className={`${style['footer--contacts']} flex-row2col margin-12px-V flex-wrap`}>
                 <p className={`${style['footer--contacts--slot']} inter dark-blue size-14px`}><i className="bi bi-envelope-open size-18px margin-2px-H"></i> placeholder@gmail.com</p>
@@ -20,7 +26,7 @@ const Footer = () => {
                 <a href="/" className={`${style['footer--socials--btn']}`}><i className="bi bi-linkedin dark-blue size-24px pointer margin-8px-H"></i></a>
             </div>
             <div className={`${style['footer--sign']} flex-row-center dark-blue sky-bg pt-sans size-14px`}>
-                © 2023. All Rights Reserved
+                {translate.copyRight}
             </div>
         </div>
     );

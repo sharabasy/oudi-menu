@@ -4,13 +4,19 @@ import Flutter from '../../assets/images/flutter.png';
 import NodeJS from '../../assets/images/node-js.png';
 import Kubernetes from '../../assets/images/Kubernetes.png';
 
-import style from './ourServices.module.scss';
+
+import { useSelector } from "react-redux";
+import languages from "../../data/languages";
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import style from './ourServices.module.scss';
 
 const OurServices = () => {
     const [mobile, setMobile] = useState(window.innerWidth <= 992);
+
+    const lang = useSelector(state => state.language.language);
+    const translate = languages[lang];
 
     useEffect(() => {
         const handleResize = () => {
@@ -33,7 +39,7 @@ const OurServices = () => {
 
     return (
         <div className={`${style['page']} full-width flex-col-top-start`}>
-            <h1 className="size-34px pt-sans white text-shadow">Our Services</h1>
+            <h1 className="size-34px pt-sans white text-shadow">{translate.ourServices}</h1>
             <div className={`${style['services']} full-width shadow-5px white-bg radius-10px`}>
                 <div className={`${style['service']} flex-row-between full-width`}>
                     <div data-aos-anchor-placement="top-center" data-aos={mobile ? 'fade-up' : 'fade-down-right'} className={`${style['piece']} ${style['piece--head']} dark-blue-bg radius-10px flex-row-center`}>

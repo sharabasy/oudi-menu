@@ -45,7 +45,7 @@ const OurServices = () => {
                     <div data-aos-anchor-placement="top-center" data-aos={mobile ? 'fade-up' : 'fade-down-right'} className={`${style['piece']} ${style['piece--head']} dark-blue-bg radius-10px flex-row-center`}>
                         <div className={`${style['piece--head--right']} dark-blue-bg`}></div>
                         <div className={`${style['piece--head--bottom']} dark-blue-bg`}></div>
-                        <div className={`${style['piece--cont']} white inter size-24px flex-col-center`}>
+                        <div className={`${style['piece--cont']} white open-sans size-24px flex-col-center`}>
                             <img src={ReactImg} alt="React" className={`${style['piece--cont--img']}`} />
                             React.js
                         </div>
@@ -54,7 +54,7 @@ const OurServices = () => {
                         <div className={`${style['piece--description--bottom']} baby-blue-bg ${style['r-side']}`}></div>
                         <div className={`${style['piece--description--left']} baby-blue-bg`}></div>
                         <div className={`${style['piece--description--top--responsive']} baby-blue-bg`}></div>
-                        <div className={`${style['piece--cont']} white inter size-12px flex-col-center`}>Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque accusantium quod minus obcaecati fugit, quae maiores minima pariatur reprehenderit ab consectetur magni aperiam eveniet inventore cupiditate natus distinctio, est consequuntur.</div>
+                        <div className={`${style['piece--cont']} white open-sans size-24px flex-col-center`}>Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque accusantium quod minus obcaecati fugit, quae maiores minima pariatur reprehenderit ab consectetur magni aperiam eveniet inventore cupiditate natus distinctio, est consequuntur.</div>
                     </div>
                 </div>
                 <div className={`${style['service']} ${style['reverse']} flex-row-between full-width`}>
@@ -62,13 +62,13 @@ const OurServices = () => {
                         <div className={`${style['piece--description--top']} baby-blue-bg`}></div>
                         <div className={`${style['piece--description--right']} baby-blue-bg`}></div>
                         <div className={`${style['piece--description--bottom']} baby-blue-bg`}></div>
-                        <div className={`${style['piece--cont']} white inter size-12px flex-col-center`}>Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque accusantium quod minus obcaecati fugit, quae maiores minima pariatur reprehenderit ab consectetur magni aperiam eveniet inventore cupiditate natus distinctio, est consequuntur.</div>
+                        <div className={`${style['piece--cont']} white open-sans size-24px flex-col-center`}>Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque accusantium quod minus obcaecati fugit, quae maiores minima pariatur reprehenderit ab consectetur magni aperiam eveniet inventore cupiditate natus distinctio, est consequuntur.</div>
                     </div>
                     <div data-aos-anchor-placement="top-center" data-aos={mobile ? 'fade-up' : 'fade-up-left'} className={`${style['piece']} ${style['piece--head']} dark-blue-bg radius-10px flex-row-center`}>
                         <div className={`${style['piece--head--top']} dark-blue-bg ${style['r-side']}`}></div>
                         <div className={`${style['piece--head--left']} dark-blue-bg`}></div>
                         <div className={`${style['piece--head--bottom']} dark-blue-bg ${style['r-side']}`}></div>
-                        <div className={`${style['piece--cont']} white inter size-24px flex-col-center`}>
+                        <div className={`${style['piece--cont']} white open-sans size-24px flex-col-center`}>
                             <img src={Flutter} alt="Flutter" className={`${style['piece--cont--img']}`} />
                             Flutter
                         </div>
@@ -88,20 +88,20 @@ const OurServices = () => {
                         <div className={`${style['piece--description--top']} baby-blue-bg ${style['r-side']}`}></div>
                         <div className={`${style['piece--description--left']} baby-blue-bg`}></div>
                         <div className={`${style['piece--description--bottom']} baby-blue-bg ${style['r-side']}`}></div>
-                        <div className={`${style['piece--cont']} white inter size-12px flex-col-center`}>Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque accusantium quod minus obcaecati fugit, quae maiores minima pariatur reprehenderit ab consectetur magni aperiam eveniet inventore cupiditate natus distinctio, est consequuntur.</div>
+                        <div className={`${style['piece--cont']} white open-sans size-24px flex-col-center`}>Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque accusantium quod minus obcaecati fugit, quae maiores minima pariatur reprehenderit ab consectetur magni aperiam eveniet inventore cupiditate natus distinctio, est consequuntur.</div>
                     </div>
                 </div>
                 <div className={`${style['service']} ${style['reverse']} flex-row-between full-width`}>
                     <div data-aos-anchor-placement={descAnchor} data-aos={mobile ? 'fade-up' : 'fade-up-right'} className={`${style['piece']} ${style['piece--description']} baby-blue-bg radius-10px flex-row-center`}>
                         <div className={`${style['piece--description--top']} baby-blue-bg`}></div>
                         <div className={`${style['piece--description--right']} baby-blue-bg`}></div>
-                        <div className={`${style['piece--cont']} white inter size-12px flex-col-center`}>Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque accusantium quod minus obcaecati fugit, quae maiores minima pariatur reprehenderit ab consectetur magni aperiam eveniet inventore cupiditate natus distinctio, est consequuntur.</div>
+                        <div className={`${style['piece--cont']} white open-sans size-24px flex-col-center`}>Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque accusantium quod minus obcaecati fugit, quae maiores minima pariatur reprehenderit ab consectetur magni aperiam eveniet inventore cupiditate natus distinctio, est consequuntur.</div>
                     </div>
                     <div data-aos-anchor-placement="top-center" data-aos={mobile ? 'fade-up' : 'fade-up-left'} className={`${style['piece']} ${style['piece--head']} dark-blue-bg radius-10px flex-row-center`}>
                         <div className={`${style['piece--head--top']} dark-blue-bg ${style['r-side']}`}></div>
                         <div className={`${style['piece--head--left']} dark-blue-bg`}></div>
                         <div className={`${style['piece--head--bottom--responsive']} dark-blue-bg`}></div>
-                        <div className={`${style['piece--cont']} white inter size-24px flex-col-center`}>
+                        <div className={`${style['piece--cont']} white open-sans size-24px flex-col-center`}>
                             <img src={Kubernetes} alt="Kubernetes" className={`${style['piece--cont--img']}`} />
                             Kubernetes
                         </div>

@@ -9,6 +9,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { languageMutations } from "../../store/mutations";
 import languages from "../../data/languages";
 
+import logo from "../../assets/images/oudi.png";
+
 import style from './navMenu.module.scss';
 
 const NavMenu = ({ isShown, close }) => {
@@ -43,7 +45,7 @@ const NavMenu = ({ isShown, close }) => {
         <CSSTransition in={isShown} mountOnEnter unmountOnExit timeout={500} classNames={{ enterActive: style['menu-enter-active'], exitActive: style['menu-exit-active'] }}>
             <div className={`${style['nav-menu']} flex-col-top-start radius-5px white-bg`}>
                 <div className={`${style['nav-menu--header']} full-width flex-row-between margin-10px-V`}>
-                    <i className="bi bi-code-slash dark-blue size-40px"></i>
+                    <img src={logo} alt="Logo" className={style["logo"]} onClick={goToPath.bind(null, '/')} />
                     <i className={`${style['nav-menu--header--close']} bi bi-x-lg dark-blue size-32px pointer`} onClick={close}></i>
                 </div>
                 <div className={`${style['nav-menu--line']}`}></div>

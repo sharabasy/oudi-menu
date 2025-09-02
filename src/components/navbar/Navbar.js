@@ -1,27 +1,39 @@
 import React, { useState } from "react";
 
-import NavMenu from './NavMenu';
+import NavMenu from "./NavMenu";
 
-import style from './navbar.module.scss';
+import style from "./navbar.module.scss";
+
+import logo from "../../assets/images/oudi.png";
+import router from "../../router/router";
+import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
-    const [menuShown, setMenuShown] = useState(false);
+  const [menuShown, setMenuShown] = useState(false);
+  const location = useLocation();
 
-    const openMenuHandler = () => {
-        setMenuShown(true);
+  const goToPath = (path) => {
+    if (location.pathname === path) {
+      return;
     }
+    router.navigate(path);
+  };
 
-    const closeMenuHandler = () => {
-        setMenuShown(false);
-    };
+  const openMenuHandler = () => {
+    setMenuShown(true);
+  };
 
-    return (
-        <div className={`${style['navbar']} flex-row-between white-bg`}>
-            <i className="bi bi-code-slash dark-blue size-40px"></i>
-            <i className="bi bi-list dark-blue size-40px pointer" onClick={openMenuHandler}></i>
-            <NavMenu isShown={menuShown} close={closeMenuHandler} />
-        </div>
-    );
+  const closeMenuHandler = () => {
+    setMenuShown(false);
+  };
+
+  return (
+    <div className={`${style["navbar"]} flex-row-between white-bg`}>
+      <img src={logo} alt="Logo" className={`${style["logo"]} pointer`} onClick={goToPath.bind(null, '/')} />
+      <i className={`${style["menu"]} bi bi-list dark-blue size-40px pointer`} onClick={openMenuHandler} />
+      <NavMenu isShown={menuShown} close={closeMenuHandler} />
+    </div>
+  );
 };
 
 export default Navbar;
